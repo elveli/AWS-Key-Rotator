@@ -1,11 +1,22 @@
-<div align="center">
+# AWS Key Rotator
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A Python script generator for securely rotating AWS IAM access keys.
 
-  <h1>Built with AI Studio</h2>
+## Features
+- **Secure Rotation**: Creates a new key before deactivating the old one.
+- **AWS Limits**: Handles the 2-key limit per IAM user.
+- **Secrets Manager**: Securely stores the new credentials in AWS Secrets Manager.
+- **Email Notification**: Notifies the end-user via AWS SES with instructions on how to retrieve their new key from the AWS Console.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Prerequisites
+- Python 3.x
+- `boto3` library (`pip install boto3`)
+- AWS credentials configured (`~/.aws/credentials`)
+- SES configured and emails verified (if your AWS account is in the SES sandbox)
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Usage
+Generate the script using the web interface, then run it:
 
-</div>
+```bash
+python rotate_keys.py --profile default --user my-iam-user --account 123456789012 --notify-email user@example.com --sender-email admin@example.com
+```

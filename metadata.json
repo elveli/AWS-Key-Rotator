@@ -1,0 +1,5 @@
+{
+  "name": "AWS Key Rotator",
+  "description": "A Python script generator for securely rotating AWS IAM access keys.",
+  "requestFramePermissions": []
+}
