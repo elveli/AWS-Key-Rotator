@@ -20,3 +20,4 @@ Generate the script using the web interface, then run it:
 ```bash
 python rotate_keys.py --profile default --user my-iam-user --account 123456789012 --notify-email user@example.com --sender-email admin@example.com
 ```
+[![Hits](https://hits.sh/github.com/elveli/repository.svg)](https://hits.sh/github.com/elveli/repository/)
